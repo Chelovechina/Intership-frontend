@@ -1,0 +1,21 @@
+@import "./../../../assets/scss/variables";
+
+.text {
+  font-size: 30px;
+  font-weight: 700;
+  color: $blue;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 992px) {
+  .text {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 772px) {
+  .text {
+    font-size: 18px;
+  }
+}

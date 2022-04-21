@@ -1,0 +1,73 @@
+@import "./../../../assets/scss/variables";
+
+.mentors {
+  margin-bottom: 20px;
+}
+.mentor {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.img {
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  margin-right: 25px;
+}
+.info {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: $gray;
+}
+.title {
+  font-weight: 500;
+  font-size: 18px;
+  color: $black;
+  margin-bottom: 15px;
+}
+.item {
+  font-size: 18px;
+  color: $black;
+}
+
+@media (max-width: 768px) {
+  .mentors {
+    margin-bottom: 0;
+  }
+  .mentor {
+    flex-direction: column;
+  }
+  .img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 0 0 10px 0;
+  }
+  .info {
+    width: inherit;
+    padding: 20px 50px;
+  }
+  .title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .item {
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .info {
+    width: 100%;
+    padding: 15px 20px;
+  }
+  .title {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .item {
+    font-size: 14px;
+  }
+}

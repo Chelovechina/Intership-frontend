@@ -1,0 +1,59 @@
+@import "./../../../assets/scss/_variables";
+
+.body {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.item {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: $gray;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $blue;
+    color: $white;
+  }
+}
+.text {
+  color: $black;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.item:hover {
+  background-color: $blue;
+  
+  .text {
+    color: $white;
+  }
+}
+
+@media (max-width: 991px) {
+  .text {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .body {
+    row-gap: 5px;
+  }
+  .item {
+      padding: 15px;
+    }
+  .text {
+    font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .item {
+    padding: 15px;
+  }
+  .text {
+    font-size: 12px;
+  }
+}
