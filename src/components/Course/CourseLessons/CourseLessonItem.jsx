@@ -4,7 +4,7 @@ import style from "./CourseLessons.module.scss";
 const CourseLessonItem = (props) => {
   return (
     <a href="#" className={style.item}>
-      <p className={style.text}>{props.lesson.name}</p>
+      <p className={style.text}>{props.lesson.lessonsTitle}</p>
     </a>
   );
 };

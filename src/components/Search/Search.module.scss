@@ -1,5 +1,28 @@
 @import "./../../assets/scss/variables";
 
+.form {
+  position: relative;
+}
+.autocomplete {
+  position: absolute;
+  top: 55px;
+  width: 100%;
+  list-style: none;
+  max-height: 240px;
+  height: auto;
+  overflow: auto;
+}
+.item {
+  padding: 15px 20px;
+  color: $white;
+  background-color: $black;
+  font-size: 16px;
+  transition: all 0.4s ease-in-out;
+  
+  &:hover {
+    background-color: $blue;
+  }
+}
 .searchBlock {
   display: flex;
   justify-content: flex-end;

@@ -1,6 +1,28 @@
 @import "./../../assets/scss/variables";
 
+.options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.optionsList {
+  width: 70%;
+  margin-top: 20px;
+  list-style: none;
+}
+.optionsItem {
+  padding: 20px 50px;
+  width: 100%;
+  background-color: $gray;
+  text-align: center;
+  transition: all 0.3s ease;
 
+  &:hover {
+    background-color: $blue;
+    color: $white;
+  }
+}
 .title {
   font-weight: 700;
   text-align: center;
@@ -12,8 +34,17 @@
   text-align: center;
   margin-bottom: 40px;
 }
+.optionsItem {
+  font-size: 20px;
+  font-weight: 500;
+}
+.optionsItem:hover {
+  background-color: $blue;
+  color: $white;
+}
 @media (min-width: 992px) {
-  .course {
+  .course,
+  .options {
     padding-top: 90px;
   }
   .container {
@@ -30,7 +61,8 @@
   }
 }
 @media (max-width: 991px) {
-  .course {
+  .course,
+  .options {
     padding-top: 70px;
   }
   .title {
@@ -43,7 +75,11 @@
   }
 }
 @media (max-width: 771px) {
-  .course {
+  .optionsItem {
+    font-size: 18px;
+  }
+  .course,
+  .options {
     padding-top: 60px;
   }
   .title {
@@ -53,5 +89,10 @@
   .sectionTitle {
     font-size: 18px;
     margin-bottom: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .optionsItem {
+    font-size: 16px;
   }
 }

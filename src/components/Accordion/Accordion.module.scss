@@ -1,0 +1,155 @@
+@import "./../../assets/scss/variables";
+
+.accordion {
+  overflow: hidden;
+}
+.head {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  padding: 20px 25px 20px 60px;
+  background-color: $gray;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 15px;
+  transition: all 0.3s ease-in-out;
+}
+.title {
+  font-weight: 600;
+  font-size: 24px;
+  transition: all 0.3s ease-in-out;
+}
+.line {
+  height: 70%;
+  position: absolute;
+  top: 10px;
+  right: 70px;
+  width: 1px;
+  background-color: $black;
+  transition: all 0.3s ease-in-out;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: $black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+.body {
+  position: relative;
+  display: none;
+  z-index: 2;
+  top: -500px;
+  overflow: hidden;
+  transition: top 0.4s ease-in-out;
+  margin-bottom: 30px;  
+}
+.item {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: $gray;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $blue;
+    color: $white;
+  }
+}
+.text {
+  color: $black;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.head:hover,
+.head.active {
+  background-color: $blue;
+  
+  .title {
+    color: $white;
+  }
+  .line {
+    background-color: $white;
+  }
+  .icon {
+    fill: $white;
+  }
+}
+.head.active {
+  .icon {
+    transform: rotate(180deg);
+  }
+}
+.body.active {
+  display: block;
+  top: 0;
+}
+.item:hover {
+  background-color: $blue;
+  
+  p {
+    color: $white;
+  }
+}
+
+@media (max-width: 991px) {
+  .title {
+    font-size: 24px;
+  }
+  .text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .head {
+    padding: 15px 18px 15px 30px;
+    margin-bottom: 10px;
+  }
+  .title {
+    font-size: 18px;
+  }
+  .icon {
+    width: 15px;
+    height: 15px;
+  }
+  .item {
+    padding: 15px;
+  }
+  .text {
+    font-size: 14px;
+  }
+  .line {
+    top: 7px;
+    right: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .head {
+    padding: 15px 18px 15px 30px;
+    margin-bottom: 10px;
+  }
+  .title {
+    font-size: 14px;
+  }
+  .icon {
+    margin-left: 20px;
+  }
+  .item {
+    padding: 15px;
+  }
+  .text {
+    font-size: 12px;
+  }
+  .line {
+    top: 7px;
+    right: 50px;
+  }
+}

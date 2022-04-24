@@ -3,10 +3,12 @@ import style from "./../../Header.module.scss";
 
 const HeaderNavInnerItem = (props) => {
   return (
-    <li className={style.innerItem}>
-      <a href="#" className={style.innerlink}>
+    <li onClick={() => {
+      props.onCourseClick(props.course.id)
+    }} className={style.innerItem}>
+      <span href="#" className={style.innerlink}>
         {props.course.name}
-      </a>
+      </span>
     </li>
   );
 } 

@@ -3,8 +3,8 @@ import CourseLessons from "./CourseLessons";
 
 const mapStateToProps = (state) => {
   return {
-    lessons: state.lessons
-  }
+    lessonBlock: state.lessonBlock,
+  };
 }
 
 const CourseLessonsContainer = connect(mapStateToProps)(CourseLessons)
