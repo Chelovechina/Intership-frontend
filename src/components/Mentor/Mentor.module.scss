@@ -1,0 +1,42 @@
+@import "./../../assets/scss/variables";
+
+.block {
+  position: relative;
+}
+.addlesson {
+  position: absolute;
+  background-color: $blue;
+  border-radius: 10px;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 5px;
+  right: 0;
+}
+.addlesson:hover {
+  .icon {
+    transform: rotate(90deg);
+  } 
+}
+.icon {
+  transition: all 0.3s ease-in-out;
+  width: 25px;
+  height: 25px;
+}
+@media (max-width: 991px) {
+  .addlesson {
+    top: -2px;
+    height: 30px;
+    width: 30px;
+    .icon {
+      width: 15px;
+    }
+  }
+}
+@media (max-width: 771px) {
+  .addlesson {
+    top: -5px;
+  }
+}

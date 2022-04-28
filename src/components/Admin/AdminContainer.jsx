@@ -3,14 +3,10 @@ import Admin from "./Admin";
 
 const mapStateToProps = (state) => {
   return {
-    lessons: state.lessons
+    lessonBlock: state.lessonBlock
   } 
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {}
-}
-
-const AdminContainer = connect(mapStateToProps, mapDispatchToProps)(Admin)
+const AdminContainer = connect(mapStateToProps)(Admin)
 
 export default AdminContainer;

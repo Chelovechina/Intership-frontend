@@ -1,13 +1,17 @@
 import React from "react";
 import style from "./Admin.module.scss";
-import CourseLessonItem from "../Course/CourseLessons/CourseLessonItem";
+import AdminLessonBlock from "./AdminLessonBlock";
 
 const Admin = (props) => {
-  const LessonsList = props.lessons.map((lesson) => {
-    return <CourseLessonItem key={lesson.id} lesson={lesson} />;
-  });
+  const lessonBlockList = props.lessonBlock.lessonBlocks.map(block => {
+    return <AdminLessonBlock key={block.id} block={block} />
+  })
 
-  return <div className={style.body}>{LessonsList}</div>;
+  return (
+    <div className={style.body}>
+      {lessonBlockList}
+    </div>
+  )
 }
 
 export default Admin;
