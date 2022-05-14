@@ -5,6 +5,85 @@
   text-align: center;
   color: $blue;
 }
+.form {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.step {
+  background-color: $gray;
+  padding: 40px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.inputTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.inputText {
+  width: 300px;
+  padding: 10px;
+  border-radius: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  border: 3px solid $blue;
+}
+.inputTextarea {
+  width: 500px;
+  height: 200px;
+  padding: 10px;
+  border-radius: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  border: 3px solid $blue;
+  resize: none;
+}
+.select {
+  padding: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border: 3px solid $blue;
+  border-radius: 15px;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  
+  & option {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+.btn {
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border: 3px solid $blue;
+  background-color: $blue;
+  color: $white;
+  transition: box-shadow 0.3s linear;
+}
+.btn:hover {
+  box-shadow: 0 0 5px $black;
+}
 @media (min-width: 992px) {
   .container {
     padding-top: 90px;

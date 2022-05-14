@@ -3,7 +3,7 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import { Route,  Routes } from "react-router-dom";
 import Main from "./components/Main";
-import AddLesson from "./components/AddLesson/AddLesson";
+import AddLessonContainer from "./components/AddLesson/AddLessonContainer";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <div className="container">
           <Routes>
             <Route path="*" element={<Main />}/>
-            <Route path="/addlesson" element={<AddLesson />} />
+            <Route path="/addlesson" element={<AddLessonContainer />} />
           </Routes>
         </div>
       </main>

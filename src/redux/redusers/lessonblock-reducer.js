@@ -1,5 +1,6 @@
 const SET_CURRENT_BLOCK = "SET_CURRENT_BLOCK";
 const LESSONS_FILTER = "LESSONS_FILTER";
+const ADD_LESSON = "ADD_LESSON"
 
 const initialState = {
   currentBlock: null,
@@ -120,10 +121,22 @@ const lessonBlockReducer = (state = initialState, action) => {
           } 
         })
       })
-
       return {
         ...state,
         filteredLessons: filteredLessons,
+      }
+
+    case ADD_LESSON:
+      const newLessonBlocks = state.lessonBlocks.map(block => {
+        if (Number(action.lesson.lessonBlock) === block.id) {
+          block.lessons.push(action.lesson)
+          return block
+        }
+        return block
+      })
+      return {
+        ...state,
+        lessonBlocks: newLessonBlocks
       }
       
     default: 
@@ -139,6 +152,11 @@ export const setCurrentBlockCreator = (blockId) => ({
 export const lessonsFilterCreator = (searchText) => ({
   type: LESSONS_FILTER,
   searchText: searchText,
+})
+
+export const addLessonCreator = (lesson) => ({
+  type: ADD_LESSON,
+  lesson: lesson,
 })
 
 export default lessonBlockReducer;
