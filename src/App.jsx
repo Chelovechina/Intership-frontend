@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import { Route,  Routes } from "react-router-dom";
 import Main from "./components/Main";
 import AddLessonContainer from "./components/AddLesson/AddLessonContainer";
+import ProfileContainer from "./pages/Profile/ProfileContainer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route path="*" element={<Main />}/>
             <Route path="/addlesson" element={<AddLessonContainer />} />
+            <Route path="/profile" element={<ProfileContainer />} />
           </Routes>
         </div>
       </main>

@@ -5,16 +5,17 @@ import HeaderBrand from "./HeaderBrand/HeaderBrand";
 import HeaderNavContainer from "./HeaderNav/HeaderNavContainer";
 
 const Header = () => {
+  const pathname = window.location.pathname;
+
   return (
     <header className={style.header}>
       <div className="container">
         <div className={style.wrapper}>
           <div className={style.inner}>
             <HeaderBrand />
-            
             <HeaderNavContainer />
           </div>
-          <SearchContainer />
+          {pathname === "/" && <SearchContainer /> }
         </div>
       </div>
     </header>

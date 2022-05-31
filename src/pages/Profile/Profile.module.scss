@@ -1,0 +1,158 @@
+@import "./../../assets/scss/variables";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.title {
+  font-weight: 700;
+  text-align: center;
+  color: $blue;
+  margin-top: 70px;
+  margin-bottom: 15px;
+  font-size: 2.2rem;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.sectionTitle {
+  font-weight: 700;
+  color: $black;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.block {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.avatarBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.avatarImg {
+  border-radius: 50%;
+  width: 200px;
+}
+.name {
+  font-weight: 600;
+  color: $black;
+  text-align: center;
+  font-size: 18px;
+}
+.status {
+  font-weight: 600;
+  color: #515151;
+  text-align: center;
+  font-size: 16px;
+}
+.info {
+  background-color: $gray;
+  padding: 2.3rem 2rem;
+  width: 100%;
+}
+.key {
+  font-weight: 500;
+  color: $black;
+}
+.value {
+  font-weight: 400;
+  color: #515151;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+.infoTitle {
+  font-weight: 600;
+  text-align: center;
+  color: $black;
+}
+.infoWrapper {
+  display: flex;
+  gap: 70px;
+  width: 450px;
+  justify-content: space-between;
+}
+.infoTitle {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: $blue;
+}
+
+@media (max-width: 767px) {
+  .title {
+    margin-top: 55px;
+    font-size: 30px;
+    margin-bottom: 8px;
+  }
+  .sectionTitle {
+    font-size: 22px;
+  }
+  .block {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .avatarImg {
+    width: 150px;
+  }
+  .infoWrapper {
+    gap: 50px;
+    width: 350px;
+  }
+  .infoTitle {
+    font-size: 18px;
+  }
+  .name {
+    font-size: 16px;
+  }
+  .status {
+    font-size: 14px;
+  }
+  .key {
+    font-size: 14px;
+  }
+  .value {
+    font-size: 14px;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .title {
+    font-size: 23px;
+  }
+  .sectionTitle {
+    font-size: 18px;
+  }
+  .avatarImg {
+    width: 100px;
+  }
+  .name {
+    font-size: 14px;
+  }
+  .status {
+    font-size: 12px;
+  }
+  .info {
+    padding: 25px 20px;
+  }
+  .infoWrapper {
+    gap: 40px;
+    max-width: 300px;
+  }
+  .infoTitle {
+    font-size: 15px;
+  }
+  .key,
+  .value {
+    font-size: 13px;
+  }
+}
