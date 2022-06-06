@@ -1,17 +1,14 @@
 import React from "react";
+import { Controller } from "react-hook-form";
+import Editor from "../../Editor/Editor";
 import style from "./../AddLesson.module.scss";
 
 const SecondStep = (props) => {
   return (
     <div className={style.step}>
-      <div className={style.block}>
-        <p className={style.inputTitle}>Введите мотивацию:</p>
-        <textarea
-          className={style.inputTextarea}
-          {...props.register("motivation", { required: true })}
-        ></textarea>
-        {props.errors.motivation && "Это поле обязательное"}
-      </div>
+      <p className={style.inputTitle}>Введите мотивацию:</p>
+      <Controller render={Editor} name="motivation" control={props.control} />
+      {props.errors.motivation && "Это поле обязательное"}
       <div className={style.btns}>
         <button className={style.btn} onClick={props.setPreviousStep}>
           Предыдущее

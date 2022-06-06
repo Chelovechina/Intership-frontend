@@ -1,16 +1,13 @@
 import React from "react";
+import { Controller } from "react-hook-form";
+import Editor from "../../Editor/Editor";
 import style from "./../AddLesson.module.scss";
 
 const FifthStep = (props) => {
   return (
     <div className={style.step}>
-      <div className={style.block}>
-        <p className={style.inputTitle}>Рефлексия:</p>
-        <textarea
-          {...props.register("reflection", {required: true})}
-          className={style.inputTextarea}
-        ></textarea>
-      </div>
+      <p className={style.inputTitle}>Рефлексия:</p>
+      <Controller render={Editor} name={"reflection"} control={props.control} />
       <div className={style.btns}>
         <button className={style.btn} onClick={props.setPreviousStep}>
           Предыдущее

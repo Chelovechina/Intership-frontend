@@ -3,19 +3,14 @@ import style from "./../AddLesson.module.scss";
 
 const FirstStep = (props) => {
   const optionList = props.lessonBlocks.map((block) => {
-    if (block === props.lessonBlocks[props.lessonBlocks.length - 1]) {
-      return (
-        <option key={block.id} value={block.id} selected>
-          {block.title}
-        </option>
-      );
-    }
     return (
       <option key={block.id} value={block.id}>
         {block.title}
       </option>
     );
   });
+
+  const defaultOption = props.lessonBlocks[props.lessonBlocks.length - 1];
 
   return (
     <div className={style.step}>
@@ -32,7 +27,7 @@ const FirstStep = (props) => {
         <p className={style.inputTitle}>Выберите блок курса:</p>
         <select
           className={style.select}
-          id=""
+          defaultValue={defaultOption.id}
           {...props.register("lessonBlock")}
         >
           {optionList}

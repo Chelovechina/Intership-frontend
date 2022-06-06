@@ -16,6 +16,7 @@ const AddLesson = (props) => {
     trigger,
     formState: { errors },
     handleSubmit,
+    control
   } = useForm();
 
   const setNextStep = () => {
@@ -27,6 +28,7 @@ const AddLesson = (props) => {
   };
 
   const onSubmit = (lesson) => {
+    console.log(lesson)
     props.addLesson(lesson)
     navigate("/", {replace: true})
   };
@@ -51,6 +53,7 @@ const AddLesson = (props) => {
             errors={errors}
             setNextStep={setNextStep}
             setPreviousStep={setPreviousStep}
+            control={control}
           />
         ) : undefined}
         {currentStep === 3 ? (
@@ -80,6 +83,7 @@ const AddLesson = (props) => {
             errors={errors}
             setNextStep={setNextStep}
             setPreviousStep={setPreviousStep}
+            control={control}
             lessonBlocks={props.lessonBlocks}
           />
         ) : undefined}
